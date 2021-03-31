@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  counter-increment: myIndex;
+}
+
+p::before {
+  content:counter(myIndex);
+}
+</style>
+</head>
+<body>
+<h1 align="center"> counter</h1>
+<p>First make a variable (myIndex) and make it increase every time a p element occurs.</p>
+<p>Then insert the counter in front of all p elements</p>
+
+</body>
+</html><br><br><hr>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p::before { 
+  content: "Read this -";
+}
+
+p#hometown::before { 
+  content: normal;
+}
+</style>
+</head>
+<body>
+<h1 align="center">normal</h1>
+<p>My name is Donald</p>
+<p id="hometown">I live in Ducksburg</p>
+
+</body>
+</html><br><br><hr>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h5::before { 
+  content: "Read this -";
+}
+
+h5#hometown::before { 
+  content: none;
+}
+</style>
+</head>
+<body>
+<h1 align="center"> none</h1>
+<h5>My name is Donald</h5>
+<h5 id="hometown">I live in Ducksburg</h5>
+
+</body>
+</html><br><br><hr>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a::before {
+  content: attr(href);
+}
+</style>
+</head>
+<body>
+<h1 align="center"> attr(attribute)</h1>
+<a href="https://www.w3schools.com">(W3Schools)</a>
+
+<p>The attr() property inserts a specified attribute's value before or after the selected element(s).</p>
+
+</body>
+</html><br><br><hr>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p::before {
+  content: open-quote;
+}
+
+p::after {
+  content: close-quote;
+}
+
+p.hometown::before {
+  content: no-open-quote;
+}
+
+p.hometown::after {
+  content: no-close-quote;
+}
+</style>
+</head>
+<body>
+<h1 align="center">open-quote close-quote no-open-quote no-close-quote </h1>
+<p>My name is Donald</p>
+<p class="hometown">I live in Ducksburg</p>
+
+<p><b>Note:</b>In this page, p elements should have quotes, but p elements with class="hometown" should not.</p>
+<p><b>Note:</b> You cannot have "close-quote" without "open-quote".</p>
+
+</body>
+</html>
